@@ -1,0 +1,22 @@
+<%- include('partials/header'); -%>
+
+<section class="container">
+    <% if(blogs.length > 0){ %>
+        <% blogs.forEach(blog => { %>
+            <div class="main">
+                <div class="left">
+                    <h2><%= blog.title %></h2>
+                    <p><%= blog.email %></p>
+                </div>
+                <div class="right">
+                    <h2>mn</h2>
+                    <a href="/read/<%= blog._id %>">View</a>
+                </div>
+            </div>
+        <% }) %>
+    <% } else{ %>
+        <p>There are no blogs.</p>
+    <% } %>
+</section>
+
+<%- include('partials/footer'); -%>
